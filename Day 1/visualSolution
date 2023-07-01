@@ -1,0 +1,90 @@
+import turtle
+
+with open("day1.txt", "r") as f:
+    directions = [k.strip() for k in f.readline().split(",")]
+
+wn = turtle.Screen()
+wn.bgcolor("light green")
+wn.title("Day 1 Solution! (2016)")
+skk = turtle.Turtle()
+
+skk.left(90)
+skk.speed(0)
+skk.penup()
+skk.goto(0, 300)
+skk.color("dark green")
+skk.write("Day 1 (2016) AdventOfCode Solution! Both parts!", align="center", font=("Courier", 24, "normal"))
+skk.penup()
+skk.goto(0, -100)
+skk.color("black")
+skk.pendown()
+
+intersection = turtle.Turtle()
+intersection.hideturtle()
+intersection.shape("circle")
+intersection.color("red")
+intersection.shapesize(0.5)
+
+coord_list = []
+second_answer = []
+
+text_turtle = turtle.Turtle()
+text_turtle.hideturtle()
+text_turtle.speed(0)
+text_turtle.penup()
+text_turtle.goto(0, -350)
+text_turtle.pendown()
+
+def parse_directions(directions):
+    return [directions[:1], directions[1:]]
+
+for i in directions:
+    di = parse_directions(i)
+    if di[0] == 'R':
+        skk.right(90)
+    elif di[0] == 'L':
+        skk.left(90)
+    else:
+        print(di[0])
+
+    take = 0
+    while take < int(di[1]):
+        nx, ny = skk.pos()
+        nx = round(nx)
+        ny = round(ny) + 100
+        coord = [nx, ny]
+        if coord in coord_list:
+            if not second_answer:
+                second_answer = coord.copy()
+
+                intersection.penup()
+                intersection.goto(nx, ny - 100)
+                intersection.pendown()
+                intersection.stamp()
+
+        coord_list.append(coord.copy())
+            
+        skk.forward(1)
+        take += 1
+
+    ox, oy = skk.pos()
+    ox = round(ox)
+    oy = round(oy) + 100
+    text_turtle.clear()
+    text_turtle.write(f"({ox}, {oy})", align="center", font=("Courier", 16, "normal"))
+    
+x, y = skk.pos()
+x = round(x)
+y = round(y) + 100
+coord = x, y
+skk.penup()
+skk.goto(0, -250)
+skk.color("red")
+skk.write(f"First answer is {sum(abs(x) for x in coord)}", align="center", font=("Courier", 24, "normal"))
+skk.penup()
+skk.goto(0, -300)
+skk.color("blue")
+skk.write(f"Second answer is {sum(abs(x) for x in second_answer)}", align="center", font=("Courier", 24, "normal"))
+skk.hideturtle()
+
+wn.exitonclick()
