@@ -20,9 +20,8 @@ for sequence in rooms:
             else: letter_counter[letter] = 1
         counter += 1
         letter = sequence[counter]
-    id, topfive = int(sequence[-10:-7]), sequence[-6:-1]
+    id, topfive, t_count = int(sequence[-10:-7]), sequence[-6:-1], 0
     vals = sorted(letter_counter.values(), reverse=True)[:5]
-    t_count = 0
     for i in topfive:
         if i in letter_counter.keys():
             if letter_counter[i] in vals:
@@ -36,6 +35,7 @@ for sequence in rooms:
             if i == '-': base_string += ' '
             else: base_string += decode(i, id)
 
+        # if 'north' in base_string: north_pole_object_location = id
         if base_string == 'northpole object storage': north_pole_object_location = id
 
 print(f"The first part of the solution to the problem is {id_sum}")
