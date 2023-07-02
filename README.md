@@ -26,4 +26,11 @@ Very easy day
  - For the second part, we can use **enumerate** to help us look into the **two next arrays**
    and fix from there
 
+## Day 4
+Finding if the rooms are true or not. Not that hard.
+ - First, we create a **dictionary** to help us keep track of letter count
+ - Then, we just do some list slicing and check if the room letters are true
+ - Second part, we can create a decode function to shift the letters
+ - I was checking, and if the room letters decode to "northpole object storage", return id
+
 
