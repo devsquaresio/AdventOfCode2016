@@ -19,4 +19,11 @@ We have to figure out the passcodes based off a direction manual. Simply manueve
  - If the movement goes **out of grid**, we don't **apply** it
  - Just do the same for other grid except for **5x5** and check if cell is **empty**
 
+## Day 3
+Very easy day
+ - We can easily just use **string functions** to get our values and **sort** them
+ - If the highest value is **less** than the **sum of the two others**, they form a **triangle**
+ - For the second part, we can use **enumerate** to help us look into the **two next arrays**
+   and fix from there
+
 
