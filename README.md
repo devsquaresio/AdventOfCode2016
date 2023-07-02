@@ -33,4 +33,10 @@ Finding if the rooms are true or not. Not that hard.
  - Second part, we can create a decode function to shift the letters
  - I was checking, and if the room letters decode to "northpole object storage", return id
 
+## Day 5
+Hashing. No other way than to brute force.
+ - We just check the hash to see if it has **five zeros** and keep on incrementing
+ - For second part, we just do the same except grab **first and second nonzero** for
+   the index and value, and make sure not to replace any spots
+
 
