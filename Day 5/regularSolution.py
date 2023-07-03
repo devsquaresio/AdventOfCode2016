@@ -1,6 +1,6 @@
 import hashlib, string
 
-passcode, counter, txt = '', 0, 'wtnhxymk'
+passcode, counter, txt = '', 0, '[Your input goes here...]'
 passcode2, passcode2real = ['_' for i in range(0, 8)], ''
 
 while (len(passcode) < 8) or ('_' in passcode2):
