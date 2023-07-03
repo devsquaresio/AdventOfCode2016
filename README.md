@@ -39,4 +39,11 @@ Hashing. No other way than to brute force.
  - For second part, we just do the same except grab **first and second nonzero** for
    the index and value, and make sure not to replace any spots
 
+## Day 6
+We can use some stuff from Day 4, like the dictionary
+ - To get the columns, we make a **grid** and the **corresponding** index goes to the **list** in grid.
+   (Ex: The **zeroth** index of an array goes in the **zero** index array)
+ - Then, we just do the most popular letter thing like in **Day 4** and we **combine** all the letters
+ - For second part, we **don't reverse** our sorted array and create another **variable** for the answer
+
 
