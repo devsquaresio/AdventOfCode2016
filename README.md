@@ -53,4 +53,11 @@ Not a hard day, just don't misundertand the directions like I did.
  - Then, we check if the three leters we are on are equal to the first, second, and first
  - And then in the hypernet, we check if the inverse is there, the BAB, and that is our answer
 
+## Day 8
+Just need a little bit of memory to do the problem.
+ - The rect part is easy, just loop over ranges and make it '#'
+ - For the rotate, I just create a temp array to store the row and column
+ - Then with the help of mod, I loop through temp and move them all
+ - For second part, I just print the pixel screen
+
 
