@@ -11,11 +11,7 @@ def print_screen(screen):
             else: print(j, end='')
         print('', end='\n')
 
-for j in range(dimensions[1]):
-    temp = []
-    for i in range(dimensions[0]):
-        temp.append('.')
-    screen.append(temp)
+screen = [['.' for _ in range(dimensions[0])] for _ in range(dimensions[1])]
 
 for action in actions:
     if action.startswith("rect"):
