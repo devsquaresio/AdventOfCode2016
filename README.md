@@ -1,7 +1,7 @@
 
 # Advent Of Code 2016 Solutions
 Advent of Code 2016 solutions in Python. All the way from Day 1 - Day 25. Includes second parts.
-Some include visual solutions and some don't. 
+Some include visual solutions and some don't. You can check in the folders, or it says here.
 
 
 ## Day 1 *(Has visualized solution)*
