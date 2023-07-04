@@ -4,7 +4,7 @@ Advent of Code 2016 solutions in Python. All the way from Day 1 - Day 25. Includ
 Some include visual solutions and some don't. 
 
 
-## Day 1
+## Day 1 *(Has visualized solution)*
 We have to navigate given only a direction and magnitude. Similar to polar coordinates.
 
  - We can solve this by using a **cartesian grid** and try to locate our current direction.
@@ -26,7 +26,7 @@ Very easy day
  - For the second part, we can use **enumerate** to help us look into the **two next rows**
    and fix from there
 
-## Day 4
+## Day 4 *(Has visualized solution)*
 Finding if the rooms are true or not. Not that hard.
  - First, we create a **dictionary** to help us keep track of letter count
  - Then, we just do some list slicing and check if the room letters are true
